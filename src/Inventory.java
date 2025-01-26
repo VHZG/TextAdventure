@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Inventory {
 
-    ArrayList<String> inventoryList = new ArrayList<String>();
-    private String tools;
+    ArrayList<String> inventoryList = new ArrayList<>();
+
     public void addToInventory(String tools){
         inventoryList.add(tools);
     }

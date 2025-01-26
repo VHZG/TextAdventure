@@ -21,12 +21,13 @@ public class Scene {
 
     public void FinalDecision(){
         if(choice == 1){
-            ThirdUniqueSceneEnd();
+            FinalSceneEnd();
         } else if (choice == 2) {
-
+            FinalSceneEnd();
         } else if (choice == 3) {
-            ThirdUniqueSceneEnd();
-        }    }
+            FinalSceneEnd();
+        }
+    }
     public void StartGame(){
         System.out.println("Welcome to the adventure");
         System.out.println("Select an option and advance to find the safe route. Good Luck!");
@@ -129,7 +130,7 @@ public class Scene {
         }
     }
 
-    public void ThirdUniqueSceneEnd(){
+    public void FinalSceneEnd(){
         if(choice == 1 && inventory.inventoryList.contains("Knife")){
             System.out.println("You shout and some tribemen hear your voice, they approach you carefully but seeing the knife you carry, makes one of them panic killing you on the spot by shooting an arrow... ");
         }else if(choice == 1){
