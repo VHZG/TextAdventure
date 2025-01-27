@@ -8,6 +8,7 @@ public class Scene {
 
     private int choice;
     private String player;
+    private double rand = Math.random();
 
     public void FirstDecision(){
         if(choice == 1){
@@ -85,15 +86,20 @@ public class Scene {
 
     public void SecondUniqueSceneA(){
         System.out.println("You survived the jump, you were thrown ashore on an island");
-        System.out.println("After searching your surroundings you find a knife, would you like to keep it?");
+        System.out.println("Do you want to check your surroundings?");
         System.out.println("Y / N");
 
         player = scan.next();
 
         if(player.equals("Y")){
-            inventory.addToInventory("Knife");
+            if(rand < 0.7) {
+                System.out.println("You found a knife");
+                inventory.addToInventory("Knife");
+            }else{
+                System.out.println("You found nothing");
+            }
         }else{
-            System.out.println("You throw away the knife");
+            System.out.println("You don't search and just start walking");
             CommonScene();
         }
 
